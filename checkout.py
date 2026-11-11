@@ -1,5 +1,7 @@
 """Checkout module for the online shopping application."""
 
+STUDENT_DISCOUNT_RATE = 0.90
+
 
 def calculate_total(items):
     """Calculate the total price of all items in the cart.
@@ -25,7 +27,7 @@ def apply_student_discount(total, is_student):
         The discounted total (10% off) for students, otherwise the original total.
     """
     if is_student:
-        return total * 0.90
+        return total * STUDENT_DISCOUNT_RATE
     return total
 
 
